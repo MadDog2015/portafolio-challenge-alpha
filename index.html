@@ -1,47 +1,78 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="es">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Encriptador de Texto</title>
-  <link rel="stylesheet" href="styles.css">
+    <meta charset="UTF-8"> 
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Encriptador Alpha</title>
+    <link rel="stylesheet" href="styles.css">
+    <link href="https://fonts.google.com/share?selection.family=Inter:wght@100;200;300;400;500;600;700;800;900" rel="stylesheet">
 </head>
 <body>
-  <div class="container">
 
-    <div class="encriptar">
-      <textarea name="texto" class="texto" id="texto"  cols="30" rows="10" placeholder="Ingresa el texto aqui"></textarea>
-    <div class="botones">
+  <header>
+    <h1 class="logotipo__allura">
+      <img src="./img/Vector.jpg" alt="Logo de ALLURA Latam">
+    </h1> 
+  </header>
 
-      <button class="btn-encriptar" type="button" onclick="encriptar ()">
-        Encriptar
-      </button>
+  <main>
 
-      <button class="btn-desencriptar" type="button" onclick="desencriptar ()">
-        Desencriptar
-      </button>
-      
-    </div>
+    <section class="seccion__izq">
 
-    <div class="terminos">
-      <p class="texto-terminos">Solo letras minúsculas y sin acentos</p>
-    </div>
+      <div class="contenedor__texto">
+        <textarea name="texto" class="texto" id="texto"  cols="30" rows="10" placeholder="Ingresa el texto aqui"></textarea>
+      </div>
 
-  </div>
+      <div class="terminos">
+        <img class="simbolo__alerta" src="./img/Group.jpg" alt="Signo de admiración">
+        <p class="texto__terminos">Solo letras minúsculas y sin acentos</p>
+      </div>
 
-  <div class="encriptado">
-    <img src="" alt="" id="imagen-muñeco">
+      <div class="botones">
 
-    <div class="mensaje-encriptado" id="mensaje-encriptado">
-      <h2 id="titulo-mensaje">Ningún mensaje encriptado</h2>
-      <p id="parrafo">Ingresa el exto que deseas encriptar o desencriptar</p>
-      <textarea name="mesnaje" id="mesnaje" cols="30" rows="10" class="mesnaje"></textarea>
-    </div>
+        <button class="btn__encriptar" type="button" onclick="encriptar ()">
+          Encriptar
+        </button>
+
+        <button class="btn__desencriptar" type="button" onclick="desencriptar ()">
+          Desencriptar
+        </button>
+
+      </div>
+
+    </section>
+
+    <section class="seccion__der">
+
+      <div class="imagen__munieco">
+        <img src="./img/muñeco.png" alt="Imagen que nos recibe cómo presentación">
+      </div>
+
+      <div class="contenedor__parrafos">
+
+      <div class="parrafo__primero">
+        <h3>Ningún mensaje fue <br> encontrado</h3>
+      </div>
+
+      <div class="parrafo__segundo">
+        <p>Ingresa el texto que desees encriptar o <br> desencriptar.</p>
+      </div>
+
+      </div>
+
+      <div class="contenedor__copiar">
+        <input type="button" class="btn__copiar" value="copiar">
+      </div>
+
+      <div class="contenedor__resultado">
+        <p class="texto__resultado"></p>
+      </div>
+
+    </section>
+
+  </main>
     
-  </div>
-
-  </div>
-
 </body>
 <script src="app.js"></script>
 </html>
